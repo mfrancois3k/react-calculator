@@ -1,38 +1,100 @@
-.App {
+.calc-app {
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 250px;
   text-align: center;
+  font-weight: bold;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Keypad {
+  display: grid;
+  /* Line below repeat will create for columns or 4 fractions in a grid layout */
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(60px, auto);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input[type="text"] {
+  height: 65px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#clear {
+  grid-column: 1/3;
+  grid-row: 1;
 }
 
-.App-link {
-  color: #61dafb;
+#result {
+  grid-column: 3/5;
+  grid-row: 5;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.calculator {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(60px, auto);
+}
+
+.calculator-display {
+  grid-column: 1/4;
+  grid-row: 1;
+}
+
+.calculator-display-result {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: right;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #000;
+}
+
+.calculator-display-input {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: right;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #000;
+}
+
+.calculator-keypad {
+  grid-column: 1/5;
+  grid-row: 2;
+}
+
+.calculator-keypad-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(60px, auto);
+}
+
+.calculator-display-result {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: right;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #000;
+}
+
+.calculator-display-input {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: right;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #000;
+}
+
+.calculator-keypad-button {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: right;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #000;
 }
